@@ -7,3 +7,6 @@ faturamento.CalculoFaturamento();
 
 IFibonacci fibonacci = new Fibonacci();
 fibonacci.CalculoFibonacci();
+
+IPercentualFaturamentoEstados percentualFaturamentoEstados = new PercentualFaturamentoEstados();
+percentualFaturamentoEstados.CalculoDePercentual();

@@ -6,6 +6,7 @@ namespace Exercicios_DesenvolvedorSP.Factory
     {
         public void CalculoFibonacci()
         {
+            Console.WriteLine("Insira um número para verificação de existência na sequência Fibonacci:\n");
             int numero = int.Parse(Console.ReadLine());
 
             int[] fibonacci = { 0, 1 };
