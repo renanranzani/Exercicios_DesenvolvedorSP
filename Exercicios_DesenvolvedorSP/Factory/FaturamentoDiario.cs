@@ -54,7 +54,15 @@ namespace Exercicios_DesenvolvedorSP.Factory
                 numDiasAcimaDaMedia = numDiasAcimaDaMedia
             };
 
-            string json = JsonSerializer.Serialize(result);
+            string jsonString = JsonSerializer.Serialize(result, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Faturamento Diário.json");
+            File.WriteAllText(path, jsonString);
+
             Console.WriteLine("Faturamento pronto para impressão");
         }
     }
